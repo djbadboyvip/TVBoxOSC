@@ -14,6 +14,9 @@ on:
         required: false
         type: boolean
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -109,8 +112,8 @@ jobs:
         if: ${{ env.commit }}
         working-directory: TVBoxOSC
         run: |
-          signingConfigs='ICAgIHNpZ25pbmdDb25maWdzIHtcCiAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICBteUNvbmZpZyB7XAogICAgICAgICAgICAgICAgc3RvcmVGaWxlIGZpbGUoUkVMRUFTRV9TVE9SRV9GSUxFKVwKICAgICAgICAgICAgICAgIHN0b3JlUGFzc3dvcmQgUkVMRUFTRV9TVE9SRV9QQVNTV09SRFwKICAgICAgICAgICAgICAgIGtleUFsaWFzIFJFTEVBU0VfS0VZX0FMSUFTXAogICAgICAgICAgICAgICAga2V5UGFzc3dvcmQgUkVMRUFTRV9LRVlfUEFTU1dPUkRcCiAgICAgICAgICAgICAgICB2MVNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICB2MlNpZ25pbmdFbmFibGVkIHRydWVcCiAgICAgICAgICAgICAgICBlbmFibGVWM1NpZ25pbmcgPSB0cnVlXAogICAgICAgICAgICAgICAgZW5hYmxlVjRTaWduaW5nID0gdHJ1ZVwKICAgICAgICAgICAgfVwKICAgICAgICB9XAogICAgfVwKXA=='
-          signingConfig='ICAgICAgICAgICAgaWYgKHByb2plY3QuaGFzUHJvcGVydHkoIlJFTEVBU0VfU1RPUkVfRklMRSIpKSB7XAogICAgICAgICAgICAgICAgc2lnbmluZ0NvbmZpZyBzaWduaW5nQ29uZmlncy5teUNvbmZpZ1wKICAgICAgICAgICAgfVwK'
+          signingConfigs='ICAgIHNpZ25pbmdDb25maWdzIHtcCiAgICAgICAgICAgIGlmIChwcm9qZWN0Lmhhc1Byb3BlcnR5KCJSRUxFQVNFX1NUT1JFX0ZJTEUiKSkgewogICAgICAgICAgICAgICAgbXlDb25maWcgewogICAgICAgICAgICAgICAgICAgIHN0b3JlRmlsZSBmaWxlKFJFTEVBU0VfU1RPUkVfRklMRSkKICAgICAgICAgICAgICAgICAgICBzdG9yZVBhc3N3b3JkIFJFTEVBU0VfU1RPUkVfUEFTU1dPUkQKICAgICAgICAgICAgICAgICAgICBrZXlBbGlhcyBSRUxFQVNFX0tFWV9BTElBUwogICAgICAgICAgICAgICAgICAgIGtleVBhc3N3b3JkIFJFTEVBU0VfS0VZX1BBU1NXT1JECiAgICAgICAgICAgICAgICAgICAgdjFTaWduaW5nRW5hYmxlZCB0cnVlCiAgICAgICAgICAgICAgICAgICAgdjJTaWduaW5nRW5hYmxlZCB0cnVlCiAgICAgICAgICAgICAgICAgICAgZW5hYmxlVjNTaWduaW5nID0gdHJ1ZQogICAgICAgICAgICAgICAgICAgIGVuYWJsZVY0U2lnbmluZyA9IHRydWUKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0='
+          signingConfig='ICAgICAgICAgICAgICAgIGlmIChwcm9qZWN0Lmhhc1Byb3BlcnR5KCJSRUxFQVNFX1NUT1JFX0ZJTEUiKSkgewogICAgICAgICAgICAgICAgICAgIHNpZ25pbmdDb25maWcgc2lnbmluZ0NvZmlncy5teUNvbmZpZwogICAgICAgICAgICAgICAgfQ=='
           signingConfigs="$(echo "$signingConfigs" |base64 -d )"
           signingConfig="$(echo "$signingConfig" |base64 -d )"
           sed -i -e "/defaultConfig {/i\\$signingConfigs " -e "/debug {/a\\$signingConfig " -e "/release {/a\\$signingConfig " app/build.gradle
