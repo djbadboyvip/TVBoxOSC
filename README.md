@@ -19,8 +19,8 @@
 
 | 俗称 | 项目地址 | 主要特点 |
 | :--- | :--- | :--- |
-| **白盒** (q215613905版) | [q215613905/TVBoxOS](https://github.com/q215613905/TVBoxOS) | 兼容性好，更接近原生实现 |
-| **灰盒** (takagen99版 / taka版) | [takagen99/Box](https://github.com/takagen99/Box) | UI美化，支持网速、分辨率显示等 |
+| **白盒子** (q215613905版) | [q215613905/TVBoxOS](https://github.com/q215613905/TVBoxOS) | 兼容性好，更接近原生实现 |
+| **黑盒子** (takagen99版 / taka版) | [takagen99/Box](https://github.com/takagen99/Box) | UI美化，支持网速、分辨率显示等 |
 
 ---
 
