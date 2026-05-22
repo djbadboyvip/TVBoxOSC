@@ -11,6 +11,10 @@ This repo relies on the following third-party projects:
 - [q215613905/TVBoxOS](https://github.com/q215613905/TVBoxOS) (Updated: 704cd2658fbcaf38551228cb90bd9f766a0c9e72)
 - [takagen99/Box](https://github.com/takagen99/Box) (Updated: 9fcd86189c7818ca26284aa69c4ce29c7a30b87f)
 ---
+项目名称	社区俗称	主要特点
+q215613905/TVBoxOS	白盒 / q215613905版	兼容性较好，被认为是更原生的版本。
+takagen99/Box	灰盒 / takagen99版 / taka版	UI界面经过了美化，并增加了网速显示、分辨率显示等实用功能。
+---
 1.⚙️ 核心区别：解析引擎不同
 TVBox这类软件本身是一个“空壳”，其播放能力取决于加载的视频源（接口/配置地址），这些源依靠“爬虫”程序解析视频链接。
 
