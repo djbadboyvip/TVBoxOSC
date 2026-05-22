@@ -9,7 +9,7 @@
 This repo relies on the following third-party projects:
 - [CatVodTVOfficial/TVBoxOSC](https://github.com/CatVodTVOfficial/TVBoxOSC)
 - [q215613905/TVBoxOS](https://github.com/q215613905/TVBoxOS) (Updated: 704cd2658fbcaf38551228cb90bd9f766a0c9e72)
-- [takagen99/Box](https://github.com/takagen99/Box) (Updated: 9fcd86189c7818ca26284aa69c4ce29c7a30b87f)
+- [takagen99/Box](https://github.com/takagen99/Box) (Updated: 258a5fef61578869ae905ca230bdde9e99fc19a8)
 ---
 项目名称	社区俗称	主要特点
 q215613905/TVBoxOS	白盒 / q215613905版	兼容性较好，被认为是更原生的版本。
